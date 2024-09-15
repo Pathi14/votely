@@ -18,7 +18,7 @@ export class SigninComponent implements OnInit{
     private router: Router
   ) { }
   
-  ngOnInit(): void {
+  ngOnInit() {
     this.signinForm = this.fb.group({
       name: ['', [Validators.required, this.noSpecialCharacters]],
       email: ['', [Validators.required, Validators.email]],
