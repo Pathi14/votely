@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SigninComponent
+    SigninComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
