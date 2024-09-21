@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-import { UserAuth } from 'src/shared/models/user-auth.model';
+import { UserAuth } from 'src/app/shared/models/user-auth.model';
 
 @Component({
   selector: 'app-signin',

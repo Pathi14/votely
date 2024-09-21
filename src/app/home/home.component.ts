@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,8 @@ export class HomeComponent implements OnInit{
   username!: string;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
   ){}
   
   ngOnInit() {
@@ -18,6 +19,9 @@ export class HomeComponent implements OnInit{
       this.username = params['name'];
     });
   }
-  
+
+  goToVotePage() {
+    this.router.navigate(['/vote', '2']);
+  }
 
 }

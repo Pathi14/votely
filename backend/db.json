@@ -236,16 +236,48 @@
   ],
   "votes": [
     {
+      "id": "8d2f",
       "userId": 1,
       "candidateId": 2,
-      "timestamp": "2024-09-06T10:00:00Z",
-      "id": "8d2f"
+      "voteTime": "2024-09-06T10:00:00Z",
+      "qualities": "Le candidat est charismatique et a une bonne capacité d'écoute.",
+      "program": 4,
+      "representation": "Il a montré des compétences solides en leadership.",
+      "profitable": "communication",
+      "listening": 5
     },
     {
+      "id": "8c2f",
       "userId": 2,
       "candidateId": 5,
-      "timestamp": "2024-09-06T11:00:00Z",
-      "id": "8c2f"
+      "voteTime": "2024-09-06T11:00:00Z",
+      "qualities": "Son expérience dans le domaine est un atout majeur.",
+      "program": 5,
+      "representation": "Il est très engagé dans les projets de la communauté.",
+      "profitable": "vote_en_ligne",
+      "listening": 4
+    },
+    {
+      "id": "913f",
+      "userId": "ae7c",
+      "candidateId": "2",
+      "qualities": "Patient aimable",
+      "program": "5",
+      "representation": "Oui, c'est un bon leader",
+      "profitable": "vote_en_ligne",
+      "listening": "5",
+      "voteTime": "2024-09-21T06:04:10.851Z"
+    },
+    {
+      "id": "8766",
+      "userId": "8a04",
+      "candidateId": "2",
+      "qualities": "Sage intelligent",
+      "program": "5",
+      "representation": "Parce que c'est mon frère",
+      "profitable": "engagement_etudiants",
+      "listening": "5",
+      "voteTime": "2024-09-21T06:06:02.514Z"
     }
   ]
 }
