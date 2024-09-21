@@ -1,0 +1,78 @@
+<section>
+    <h2>Formulaire de Justification du Choix</h2>
+    <div *ngIf="hasAlreadyVoted; else voteFormTemplate">
+        <p>Vous avez déjà voté.</p>
+    </div>
+    <ng-template #voteFormTemplate>
+        <form [formGroup]="voteForm" (ngSubmit)="validateVote()">
+            <div>
+                <h3>1. Quelles qualités chez ce candidat vous ont convaincu de lui accorder votre vote ?</h3>
+                <textarea formControlName="qualities"></textarea>
+            </div>
+            <div>
+                <h3>2. Comment évaluez-vous le programme proposé par ce candidat pour améliorer la vie étudiante ?</h3>
+                <label>
+                    <input type="radio" formControlName="program" value="1"> 1 (Pas convaincant)
+                </label>
+                <label>
+                    <input type="radio" formControlName="program" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" formControlName="program" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" formControlName="program" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" formControlName="program" value="5"> 5 (Très convaincant)
+                </label>
+            </div>
+            <div>
+                <h3>3. Pensez-vous que ce candidat est capable de représenter efficacement les étudiants auprès de l'administration ? Pourquoi ?</h3>
+                <textarea formControlName="representation"></textarea>
+            </div>
+            <div>
+                <h3>4. Selon vous, quelle proposition du programme du candidat est la plus bénéfique pour les étudiants ?</h3>
+                <select formControlName="profitable">
+                    <option value="" disabled selected>Choisissez une proposition</option>
+                    <option value="communication">Améliorer la communication entre étudiants et administration</option>
+                    <option value="vote_en_ligne">Réformer le système de vote en ligne</option>
+                    <option value="evenements_mensuels">Organiser des événements mensuels pour renforcer la cohésion</option>
+                    <option value="engagement_etudiants">Encourager l'engagement des étudiants dans les décisions du campus</option>
+                </select>
+            </div>
+            <div>
+                <h3>5. Dans quelle mesure pensez-vous que ce candidat est à l'écoute des préoccupations des étudiants ?</h3>
+                <label>
+                    <input type="radio" formControlName="listening" value="1"> 1 (Pas du tout)
+                </label>
+                <label>
+                    <input type="radio" formControlName="listening" value="2"> 2
+                </label>
+                <label>
+                    <input type="radio" formControlName="listening" value="3"> 3
+                </label>
+                <label>
+                    <input type="radio" formControlName="listening" value="4"> 4
+                </label>
+                <label>
+                    <input type="radio" formControlName="listening" value="5"> 5 (Absolument)
+                </label>
+            </div>
+            <p *ngIf="voteForm.invalid && (voteForm.touched || voteForm.dirty)">
+                {{ getErrorLabel }}
+            </p>
+            <div>
+                <button [disabled]="voteForm.invalid">Soumettre</button>
+            </div>
+        </form>
+    </ng-template>
+
+    <app-confirmation *ngIf="showConfirm" title="Confirmation" (hasConfirmed)="confirmationClosed($event)">
+        <h2 class="dialog_title" header>
+            <span class="dialog_title_text">Confirmation</span>
+            <span class="dialog_title_close" (click)="close()">&times;</span>
+        </h2>
+        <p>Êtes-vous sûr de vouloir valider votre vote ?</p>
+    </app-confirmation>
+</section>
