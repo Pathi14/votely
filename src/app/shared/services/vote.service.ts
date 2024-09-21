@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, Observable, of } from 'rxjs';
-import { User } from '../shared/models/user.model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

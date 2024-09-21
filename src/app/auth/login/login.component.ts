@@ -40,7 +40,7 @@ export class LoginComponent {
   }
 
   navigateTohome() {
-    this.router.navigate(['/home', this.authService.user?.name]);
+    this.router.navigate(['/election', this.authService.user?.name]);
   }
 
 }

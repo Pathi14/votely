@@ -7,9 +7,11 @@ import { LoginComponent } from './auth/login/login.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { VoteComponent } from './vote/vote.component';
+import { VoteComponent } from './election/vote/vote.component';
 import { ConfirmationComponent } from './shared/components/confirmation/confirmation.component';
-import { CandidatComponent } from './candidat/candidat.component';
+import { CandidateComponent } from './election/candidate/candidate.component';
+import { ElectionComponent } from './election/election.component';
+import { StatisticComponent } from './election/statistic/statistic.component';
 
 
 @NgModule({
@@ -19,10 +21,10 @@ import { CandidatComponent } from './candidat/candidat.component';
     SigninComponent,
     HomeComponent,
     VoteComponent,
-    ConfirmationComponent
-    HomeComponent
-    AppComponent,
-    CandidatComponent
+    ConfirmationComponent,
+    CandidateComponent,
+    ElectionComponent,
+    StatisticComponent
   ],
   imports: [
     BrowserModule,

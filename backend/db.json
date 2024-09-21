@@ -79,6 +79,24 @@
       "age": 20,
       "sexe": "F",
       "profilePictureUrl": "ert"
+    },
+    {
+      "id": "1b4c",
+      "email": "pavi@efrei.net",
+      "name": "pavi",
+      "password": "password",
+      "age": 19,
+      "sexe": "F",
+      "profilePictureUrl": "123"
+    },
+    {
+      "id": "8dc1",
+      "email": "paul@gm.com",
+      "name": "paul",
+      "password": "123456",
+      "age": 23,
+      "sexe": "M",
+      "profilePictureUrl": "aze"
     }
   ],
   "candidates": [
@@ -298,6 +316,39 @@
       "profitable": "evenements_mensuels",
       "listening": "5",
       "voteTime": "2024-09-21T16:19:02.096Z"
+    },
+    {
+      "id": "a96d",
+      "userId": "3",
+      "candidateId": "2",
+      "qualities": "Pertinent et actif",
+      "program": "5",
+      "representation": "Oui oui programme detaillé",
+      "profitable": "vote_en_ligne",
+      "listening": "5",
+      "voteTime": "2024-09-21T19:22:41.268Z"
+    },
+    {
+      "id": "7ca4",
+      "userId": "369d",
+      "candidateId": "10",
+      "qualities": "Admirable et patiente",
+      "program": "5",
+      "representation": "Oui oui oui je le crois",
+      "profitable": "evenements_mensuels",
+      "listening": "5",
+      "voteTime": "2024-09-21T19:32:55.893Z"
+    },
+    {
+      "id": "7687",
+      "userId": "369d",
+      "candidateId": "10",
+      "qualities": "Admirable et patiente",
+      "program": "5",
+      "representation": "Oui oui oui je le crois",
+      "profitable": "evenements_mensuels",
+      "listening": "5",
+      "voteTime": "2024-09-21T19:33:17.631Z"
     }
   ]
 }
