@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit{
   }
 
   goToVotePage() {
-    this.router.navigate(['/vote', '2']);
+    this.router.navigate(['/vote', '2']);// à passer via candidat
   }
 
 }

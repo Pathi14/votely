@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   login(user: UserAuth): Observable<User[]> {
-    return this.http.get<User[]>('http://localhost:3000/users?username=' + user.name + '&password=' + user.password);
+    return this.http.get<User[]>('http://localhost:3000/users?name=' + user.name + '&password=' + user.password);
   }
 
   saveUser() {

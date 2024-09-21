@@ -70,6 +70,15 @@
       "age": 18,
       "sexe": "F",
       "profilePictureUrl": "fff"
+    },
+    {
+      "id": "369d",
+      "email": "Arm@gmail.com",
+      "name": "Armelle",
+      "password": "123456",
+      "age": 20,
+      "sexe": "F",
+      "profilePictureUrl": "ert"
     }
   ],
   "candidates": [
@@ -278,6 +287,17 @@
       "profitable": "engagement_etudiants",
       "listening": "5",
       "voteTime": "2024-09-21T06:06:02.514Z"
+    },
+    {
+      "id": "b442",
+      "userId": "c632",
+      "candidateId": "2",
+      "qualities": "Calme et posé",
+      "program": "3",
+      "representation": "Oui il a tous les atouts",
+      "profitable": "evenements_mensuels",
+      "listening": "5",
+      "voteTime": "2024-09-21T16:19:02.096Z"
     }
   ]
 }
