@@ -1,0 +1,12 @@
+<section class="login">
+    <form class="login_form" [formGroup]="loginForm" (ngSubmit)="login()">
+      <h2>Connexion</h2>
+      <div class="login_form-container">
+        <input type="text" placeholder="name" class="input" formControlName="name" />
+        <input type="password" placeholder="Password" class="input" formControlName="password" />
+      </div>
+      <button class="btn">Se connecter</button>
+    </form>
+    <p class="message">Vous n'avez pas de compte? <a routerLink="/register" class="login_register-link">Créez le ici</a></p>
+</section>
+  
