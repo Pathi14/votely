@@ -1,10 +1,10 @@
-<p>candidat works!</p>
+
 <div class="candidats">
     <div class="candidat-card" *ngFor="let candidat of candidat">
       <img [src]="candidat.profilePictureUrl" alt="{{candidat.name}}" class="candidat-photo">
       <h3>{{ candidat.name }}</h3>
       <p>Age: {{ candidat.age }}</p>
-      <p>Sexe: {{ candidat.sexe }}</p>
+      <p>Biographie: {{ candidat.bio }}</p>
       <button (click)="vote(candidat)">Voter</button>
       <button (click)="showDetails(candidat)">Détails</button>
     </div>

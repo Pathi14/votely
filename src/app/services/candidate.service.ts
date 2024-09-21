@@ -8,7 +8,7 @@ export interface Candidate {
   name: string;
   password: string;
   age: number;
-  sexe: string;
+  bio: string;
   profilePictureUrl: string;
 }
 
@@ -17,7 +17,7 @@ export interface Candidate {
 })
 export class CandidateService {
 
-  private apiUrl = 'http://localhost:3000/users'; 
+  private apiUrl = 'http://localhost:3000/candidates'; 
 
   constructor(private http: HttpClient) { }
 
