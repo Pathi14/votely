@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { UserAuth } from 'src/shared/models/user-auth.model';
-import { User } from 'src/shared/models/user.model';
+import { UserAuth } from 'src/app/shared/models/user-auth.model';
+import { User } from 'src/app/shared/models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   login(user: UserAuth): Observable<User[]> {
-    return this.http.get<User[]>('http://localhost:3000/users?username=' + user.name + '&password=' + user.password);
+    return this.http.get<User[]>('http://localhost:3000/users?name=' + user.name + '&password=' + user.password);
   }
 
   saveUser() {

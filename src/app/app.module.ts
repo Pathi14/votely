@@ -7,6 +7,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { VoteComponent } from './vote/vote.component';
+import { ConfirmationComponent } from './shared/components/confirmation/confirmation.component';
 import { CandidatComponent } from './candidat/candidat.component';
 
 
@@ -15,6 +17,9 @@ import { CandidatComponent } from './candidat/candidat.component';
     AppComponent,
     LoginComponent,
     SigninComponent,
+    HomeComponent,
+    VoteComponent,
+    ConfirmationComponent
     HomeComponent
     AppComponent,
     CandidatComponent
