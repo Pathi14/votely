@@ -29,12 +29,12 @@ export class LoginComponent {
     console.log(this.loginForm.value);
 
     this.authService.login(this.loginForm.value).subscribe(
-      (user: User[]) => {
-        if (user.length === 0)
+      (result: User[]) => {
+        if (result.length === 0)
           alert('Erreur dans le pseudo ou le mot de passe');
-        this.authService.user = user[0];
+        this.authService.user = result[0];
         if (!this.authService.user) return;
-        this.authService.saveUser();
+        this.authService.saveUser(result[0]);
         this.navigateTohome();
       },
       (error) => {

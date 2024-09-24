@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
-import { UserAuth } from 'src/app/shared/models/user-auth.model';
+import { RegisterData } from 'src/app/shared/models/register-data.model';
 
 @Component({
   selector: 'app-signin',
@@ -41,7 +41,7 @@ export class SignupComponent implements OnInit {
       return;
     }
 
-    const newUser: UserAuth = {
+    const newUser: RegisterData = {
       email: this.signinForm.value.email,
       name: this.signinForm.value.name,
       password: this.signinForm.value.password,

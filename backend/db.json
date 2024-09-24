@@ -105,6 +105,14 @@
       "password": "6Juin2002",
       "age": 23,
       "sexe": "F"
+    },
+    {
+      "id": "e88f",
+      "email": "pavone@test.com",
+      "name": "Pavone",
+      "password": "azerty",
+      "age": 22,
+      "sexe": "F"
     }
   ],
   "candidates": [
