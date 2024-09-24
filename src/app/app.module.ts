@@ -7,8 +7,12 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { VoteComponent } from './vote/vote.component';
+import { VoteComponent } from './election/vote/vote.component';
 import { ConfirmationComponent } from './shared/components/confirmation/confirmation.component';
+import { CandidateComponent } from './election/candidate/candidate.component';
+import { ElectionComponent } from './election/election.component';
+import { StatisticComponent } from './election/statistic/statistic.component';
+
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
@@ -19,6 +23,10 @@ import { FooterComponent } from './shared/footer/footer.component';
     SignupComponent,
     HomeComponent,
     VoteComponent,
+    ConfirmationComponent,
+    CandidateComponent,
+    ElectionComponent,
+    StatisticComponent
     ConfirmationComponent,
     HeaderComponent,
     FooterComponent,

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { VoteService } from './vote.service';
+import { VoteService } from 'src/app/shared/services/vote.service';
 
 @Component({
   selector: 'app-vote',
@@ -49,6 +49,7 @@ export class VoteComponent {
       };
       
       this.voteService.submitVote(voteData);
+      this.router.navigate(['/statistic']);
     }
     return undefined;
   }

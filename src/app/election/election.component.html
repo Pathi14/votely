@@ -1,0 +1,14 @@
+<section>
+    <h2>Bienvenue {{username}} dans votre interface de vote de délégué !</h2>
+    <section>
+      <div class="candidats">
+        <div class="candidat-card" *ngFor="let candidate of candidates">
+          <img [src]="candidate.profilePictureUrl" alt="{{candidate.name}}" class="candidat-photo" width="300" height="300">
+          <h3>{{ candidate.name }}</h3>
+          <button (click)="viewDetails(candidate)">Voir plus</button>
+          <button (click)="goToVotePage(candidate.id)">Je vote</button>
+        </div>
+      </div>
+    </section>
+  </section>
+  

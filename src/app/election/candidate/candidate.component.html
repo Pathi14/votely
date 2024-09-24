@@ -1,0 +1,8 @@
+<div *ngIf="candidate">
+  <h2>{{ candidate.name }}</h2>
+  <img [src]="candidate.profilePictureUrl" alt="{{candidate.name}}" class="candidat-photo" width="300" height="300">
+  <p>Age: {{ candidate.age }}</p>
+  <p>Biographie: {{ candidate.bio }}</p>
+  <p>Programme: {{ candidate.program }}</p>
+  <button (click)="goToVotePage(candidate.id)">Je vote</button>
+</div>
