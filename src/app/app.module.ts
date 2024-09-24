@@ -26,8 +26,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     ConfirmationComponent,
     CandidateComponent,
     ElectionComponent,
-    StatisticComponent
-    ConfirmationComponent,
+    StatisticComponent,
     HeaderComponent,
     FooterComponent,
   ],

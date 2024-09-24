@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  AbstractControl,
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  ValidationErrors,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { UserAuth } from 'src/app/shared/models/user-auth.model';
@@ -33,14 +26,20 @@ export class SignupComponent implements OnInit {
         confirmPassword: ['', Validators.required],
         age: ['', Validators.required],
         sexe: ['', Validators.required],
-        profilePictureUrl: ['', Validators.required],
+        profilePictureUrl: [''],
       },
       { validators: this.checkPasswords }
     );
   }
 
   addUser() {
-    if (this.signinForm.invalid) return;
+    console.log(this.signinForm.value);
+    console.log('valid? ' + this.signinForm.valid);
+
+    if (this.signinForm.invalid) {
+      alert(JSON.stringify(this.signinForm));
+      return;
+    }
 
     const newUser: UserAuth = {
       email: this.signinForm.value.email,
@@ -48,7 +47,6 @@ export class SignupComponent implements OnInit {
       password: this.signinForm.value.password,
       age: this.signinForm.value.age,
       sexe: this.signinForm.value.sexe,
-      profilePictureUrl: this.signinForm.value.profilePictureUrl,
     };
 
     this.authService.addUser(newUser);
@@ -81,6 +79,7 @@ export class SignupComponent implements OnInit {
       return 'Le nom ne doit pas contenir de caractères spéciaux';
     if (this.signinForm.get('email')?.hasError('email'))
       return "L'adresse e-mail n'est pas valide";
-    return 'Un problème est survenu';
+
+    return null;
   }
 }

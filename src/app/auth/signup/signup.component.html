@@ -1,4 +1,4 @@
-<section class="bg-gray-50 dark:bg-gray-900 py-40 lg:py-20 2xl:py-0">
+<section class="bg-gray-50 dark:bg-gray-900 py-40 2xl:py-0">
   <div
     class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
   >
@@ -23,6 +23,11 @@
         >
           Créer un compte
         </h1>
+
+        <p *ngIf="getErrorLabel" class="text-sm text-red-600">
+          {{ getErrorLabel }}
+        </p>
+
         <form
           class="space-y-4 md:space-y-6"
           [formGroup]="signinForm"
@@ -85,7 +90,7 @@
               >Confirmer le mot de passe</label
             >
             <input
-              type="confirm-password"
+              type="password"
               name="confirm-password"
               id="confirm-password"
               placeholder="••••••••"
@@ -109,7 +114,51 @@
               min="18"
               max="99"
               required
+              formControlName="age"
             />
+          </div>
+
+          <div class="sm:col-span-2">
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Sexe
+            </label>
+
+            <div class="flex items-center gap-4">
+              <div class="flex items-center">
+                <input
+                  id="default-radio-1"
+                  type="radio"
+                  value="M"
+                  name="default-radio"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  formControlName="sexe"
+                />
+                <label
+                  for="default-radio-1"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >M</label
+                >
+              </div>
+
+              <div class="flex items-center">
+                <input
+                  checked
+                  id="default-radio-2"
+                  type="radio"
+                  value="F"
+                  name="default-radio"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  formControlName="sexe"
+                />
+                <label
+                  for="default-radio-2"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >F</label
+                >
+              </div>
+            </div>
           </div>
 
           <div class="flex items-start">
@@ -136,7 +185,8 @@
           </div>
           <button
             type="submit"
-            class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 disabled:bg-primary-200 disabled:pointer-events-none"
+            [disabled]="signinForm.invalid || signinForm.pristine"
           >
             S'inscrire
           </button>
