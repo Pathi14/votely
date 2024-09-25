@@ -113,6 +113,14 @@
       "password": "azerty",
       "age": 22,
       "sexe": "F"
+    },
+    {
+      "id": "86e2",
+      "email": "paul@test.com",
+      "name": "PaulHenry Ngounou",
+      "password": "azerty",
+      "age": 22,
+      "sexe": "M"
     }
   ],
   "candidates": [
@@ -365,6 +373,27 @@
       "profitable": "evenements_mensuels",
       "listening": "5",
       "voteTime": "2024-09-21T19:33:17.631Z"
+    },
+    {
+      "id": "ea04",
+      "candidateId": "1",
+      "qualities": "bkjbdkjhlkdjkjzldkzh",
+      "program": "1",
+      "representation": "ljfeiljefjie",
+      "profitable": "communication",
+      "listening": "2",
+      "voteTime": "2024-09-25T12:59:27.012Z"
+    },
+    {
+      "id": "386a",
+      "userId": "86e2",
+      "candidateId": "1",
+      "qualities": "oihihdiouzhiduhzdhuzd",
+      "program": "1",
+      "representation": "eohofiehejofuheoifhieohfoiehf",
+      "profitable": "communication",
+      "listening": "1",
+      "voteTime": "2024-09-25T13:02:08.305Z"
     }
   ]
 }

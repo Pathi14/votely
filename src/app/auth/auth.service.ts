@@ -38,6 +38,11 @@ export class AuthService {
     );
   }
 
+  logout() {
+    localStorage.removeItem('user');
+    this.user = undefined;
+  }
+
   saveUser(user: User) {
     localStorage.setItem('user', '' + user?.id);
   }

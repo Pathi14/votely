@@ -12,7 +12,6 @@ import { ConfirmationComponent } from './shared/components/confirmation/confirma
 import { CandidateComponent } from './election/candidate/candidate.component';
 import { ElectionComponent } from './election/election.component';
 import { StatisticComponent } from './election/statistic/statistic.component';
-
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 

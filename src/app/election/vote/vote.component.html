@@ -1,216 +1,256 @@
-<section class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-    <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">
-      Veuillez répondre aux questions suivantes
-    </h2>
-    <form action="#">
-      <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-        <div class="sm:col-span-2">
-          <label
-            for="name"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Quelles qualités chez ce candidat vous ont convaincu de lui
-            accorder votre vote ?
-          </label>
+<div *ngIf="hasAlreadyVoted; else notYetVoted">Vous avez déjà voté.</div>
 
-          <textarea
-            id="description"
-            rows="8"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-            placeholder="Your description here"
-          ></textarea>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label
-            for="name"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Comment évaluez-vous le programme proposé par ce candidat pour
-            améliorer la vie étudiante ?
-          </label>
-
-          <div class="flex items-center gap-4">
-            <div class="flex items-center">
-              <input
-                id="default-radio-1"
-                type="radio"
-                value=""
-                name="default-radio"
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="default-radio-1"
-                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >1</label
-              >
-            </div>
-
-            <div class="flex items-center">
-              <input
-                checked
-                id="default-radio-2"
-                type="radio"
-                value=""
-                name="default-radio"
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="default-radio-2"
-                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >2</label
-              >
-            </div>
-
-            <div class="flex items-center">
-              <input
-                checked
-                id="default-radio-2"
-                type="radio"
-                value=""
-                name="default-radio"
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="default-radio-2"
-                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >3</label
-              >
-            </div>
-
-            <div class="flex items-center">
-              <input
-                checked
-                id="default-radio-2"
-                type="radio"
-                value=""
-                name="default-radio"
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="default-radio-2"
-                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >4</label
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label
-            for="brand"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Pensez-vous que ce candidat est capable de représenter efficacement
-            les étudiants auprès de l'administration ? Pourquoi ?
-          </label>
-
-          <textarea
-            id="description"
-            rows="8"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-            placeholder="Your description here"
-          ></textarea>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label
-            for="brand"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Selon vous, quelle proposition du programme du candidat est la plus
-            bénéfique pour les étudiants ?
-          </label>
-
-          <select
-            id="countries"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          >
-            <option value="US">United States</option>
-            <option value="CA">Canada</option>
-            <option value="FR">France</option>
-            <option value="DE">Germany</option>
-          </select>
-        </div>
-
-        <div class="sm:col-span-2">
-          <label
-            for="name"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Dans quelle mesure pensez-vous que ce candidat est à l'écoute des
-            préoccupations des étudiants ?
-          </label>
-
-          <div class="flex items-center gap-4">
-            <div class="flex items-center">
-              <input
-                id="default-radio-1"
-                type="radio"
-                value=""
-                name="default-radio"
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="default-radio-1"
-                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >1</label
-              >
-            </div>
-
-            <div class="flex items-center">
-              <input
-                checked
-                id="default-radio-2"
-                type="radio"
-                value=""
-                name="default-radio"
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="default-radio-2"
-                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >2</label
-              >
-            </div>
-
-            <div class="flex items-center">
-              <input
-                checked
-                id="default-radio-2"
-                type="radio"
-                value=""
-                name="default-radio"
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="default-radio-2"
-                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >3</label
-              >
-            </div>
-
-            <div class="flex items-center">
-              <input
-                checked
-                id="default-radio-2"
-                type="radio"
-                value=""
-                name="default-radio"
-                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="default-radio-2"
-                class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >4</label
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <button
-        type="submit"
-        class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+<ng-template #notYetVoted>
+  <section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+      <div
+        *ngIf="candidate"
+        class="flex flex-col gap-3 items-center justify-center"
       >
-        Voter
-      </button>
-    </form>
-  </div>
-</section>
+        <div class="size-20 rounded-full overflow-hidden">
+          <img
+            src="{{ candidate.profilePictureUrl }}"
+            alt="{{ candidate.name }} avatar"
+          />
+        </div>
+
+        <p class="font-bold">{{ candidate.name | titlecase }}</p>
+      </div>
+      <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">
+        Veuillez répondre aux questions suivantes
+      </h2>
+
+      <p class="text-sm text-red-600 mb-5">{{ getErrorLabel }}</p>
+
+      <form [formGroup]="voteForm" (ngSubmit)="validateVote()">
+        <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+          <div class="sm:col-span-2">
+            <label
+              for="qualities"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Quelles qualités chez ce candidat vous ont convaincu de lui
+              accorder votre vote ?
+            </label>
+
+            <textarea
+              id="qualities"
+              rows="8"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="Your description here"
+              formControlName="qualities"
+            ></textarea>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Comment évaluez-vous le programme proposé par ce candidat pour
+              améliorer la vie étudiante ?
+            </label>
+
+            <div class="flex items-center gap-4">
+              <div class="flex items-center">
+                <input
+                  id="program-1"
+                  type="radio"
+                  value="1"
+                  formControlName="program"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  name="program"
+                />
+                <label
+                  for="program-1"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >1</label
+                >
+              </div>
+
+              <div class="flex items-center">
+                <input
+                  id="program-2"
+                  type="radio"
+                  value="2"
+                  formControlName="program"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  name="program"
+                />
+                <label
+                  for="program-2"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >2</label
+                >
+              </div>
+
+              <div class="flex items-center">
+                <input
+                  id="program-3"
+                  type="radio"
+                  value="3"
+                  formControlName="program"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  name="program"
+                />
+                <label
+                  for="program-3"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >3</label
+                >
+              </div>
+
+              <div class="flex items-center">
+                <input
+                  id="program-4"
+                  type="radio"
+                  value="4"
+                  formControlName="program"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  name="program"
+                />
+                <label
+                  for="program-4"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >4</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label
+              for="brand"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Pensez-vous que ce candidat est capable de représenter
+              efficacement les étudiants auprès de l'administration ? Pourquoi ?
+            </label>
+
+            <textarea
+              id="representation"
+              rows="8"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              placeholder="Your description here"
+              formControlName="representation"
+            ></textarea>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label
+              for="brand"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Selon vous, quelle proposition du programme du candidat est la
+              plus bénéfique pour les étudiants ?
+            </label>
+
+            <select
+              id="profitable"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              formControlName="profitable"
+            >
+              <option value="" disabled selected>
+                Choisissez une proposition
+              </option>
+              <option value="communication">
+                Améliorer la communication entre étudiants et administration
+              </option>
+              <option value="vote_en_ligne">
+                Réformer le système de vote en ligne
+              </option>
+              <option value="evenements_mensuels">
+                Organiser des événements mensuels pour renforcer la cohésion
+              </option>
+              <option value="engagement_etudiants">
+                Encourager l'engagement des étudiants dans les décisions du
+                campus
+              </option>
+            </select>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Dans quelle mesure pensez-vous que ce candidat est à l'écoute des
+              préoccupations des étudiants ?
+            </label>
+
+            <div class="flex items-center gap-4">
+              <div class="flex items-center">
+                <input
+                  id="listening-1"
+                  type="radio"
+                  value="1"
+                  formControlName="listening"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  name="listening"
+                />
+                <label
+                  for="listening-1"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >1</label
+                >
+              </div>
+
+              <div class="flex items-center">
+                <input
+                  id="listening-2"
+                  type="radio"
+                  value="2"
+                  formControlName="listening"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  name="listening"
+                />
+                <label
+                  for="listening-2"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >2</label
+                >
+              </div>
+
+              <div class="flex items-center">
+                <input
+                  id="listening-3"
+                  type="radio"
+                  value="3"
+                  formControlName="listening"
+                  name="listening"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="listening-3"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >3</label
+                >
+              </div>
+
+              <div class="flex items-center">
+                <input
+                  id="listening-4"
+                  type="radio"
+                  value="4"
+                  formControlName="listening"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  name="listening"
+                />
+                <label
+                  for="listening-4"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >4</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn mt-5" [disabled]="voteForm.invalid">
+          Voter
+        </button>
+
+        <app-confirmation
+          *ngIf="showConfirm"
+          title="Confirmation"
+          (hasConfirmed)="confirmationClosed($event)"
+        >
+          Êtes-vous sûr de vouloir voter pour {{ candidate.name }} ?
+        </app-confirmation>
+      </form>
+    </div>
+  </section>
+</ng-template>

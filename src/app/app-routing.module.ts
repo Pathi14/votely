@@ -22,7 +22,7 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'election/:name',
+    path: 'election',
     component: ElectionComponent,
   },
   {

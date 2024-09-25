@@ -1,14 +1,45 @@
-<section>
-    <h2>Bienvenue {{username}} dans votre interface de vote de délégué !</h2>
-    <section>
-      <div class="candidats">
-        <div class="candidat-card" *ngFor="let candidate of candidates">
-          <img [src]="candidate.profilePictureUrl" alt="{{candidate.name}}" class="candidat-photo" width="300" height="300">
-          <h3>{{ candidate.name }}</h3>
-          <button (click)="viewDetails(candidate)">Voir plus</button>
-          <button (click)="goToVotePage(candidate.id)">Je vote</button>
+<app-header></app-header>
+
+<section class="container">
+  <h1>Candidats</h1>
+
+  <section class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-5">
+    <div
+      class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      *ngFor="let candidate of candidates"
+    >
+      <div class="overflow-hidden max-h-[200px]">
+        <img
+          class="rounded-t-lg"
+          src="{{ candidate.profilePictureUrl }}"
+          alt="{{ candidate.name }} avatar"
+        />
+      </div>
+
+      <div class="p-5">
+        <a href="#">
+          <p
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            {{ candidate.name }}
+          </p>
+        </a>
+        <p
+          class="font-normal text-gray-700 dark:text-gray-400 truncate max-w-96 mb-5"
+        >
+          {{ candidate.bio }}
+        </p>
+
+        <div class="flex justify-end items-center">
+          <a routerLink="/candidate/{{ candidate.id }}" class="mr-5"
+            >Voir plus</a
+          >
+
+          <a routerLink="/vote/{{ candidate.id }}" class="btn">Voter</a>
         </div>
       </div>
-    </section>
+    </div>
   </section>
-  
+</section>
+
+<app-footer></app-footer>
