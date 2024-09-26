@@ -121,6 +121,22 @@
       "password": "azerty",
       "age": 22,
       "sexe": "M"
+    },
+    {
+      "id": "d59e",
+      "email": "papou@gmail.com",
+      "name": "papou",
+      "password": "azerty",
+      "age": 23,
+      "sexe": "M"
+    },
+    {
+      "id": "4dc5",
+      "email": "lea@gmail.com",
+      "name": "lea delacroix",
+      "password": "azerty",
+      "age": 21,
+      "sexe": "M"
     }
   ],
   "candidates": [
@@ -286,28 +302,6 @@
     }
   ],
   "votes": [
-    {
-      "id": "8d2f",
-      "userId": 1,
-      "candidateId": 2,
-      "voteTime": "2024-09-06T10:00:00Z",
-      "qualities": "Le candidat est charismatique et a une bonne capacité d'écoute.",
-      "program": 4,
-      "representation": "Il a montré des compétences solides en leadership.",
-      "profitable": "communication",
-      "listening": 5
-    },
-    {
-      "id": "8c2f",
-      "userId": 2,
-      "candidateId": 5,
-      "voteTime": "2024-09-06T11:00:00Z",
-      "qualities": "Son expérience dans le domaine est un atout majeur.",
-      "program": 5,
-      "representation": "Il est très engagé dans les projets de la communauté.",
-      "profitable": "vote_en_ligne",
-      "listening": 4
-    },
     {
       "id": "913f",
       "userId": "ae7c",

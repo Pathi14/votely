@@ -2,17 +2,18 @@
 
 <section class="container">
   <h1>Candidats</h1>
-
   <section class="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-5">
     <div
       class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       *ngFor="let candidate of candidates"
+      appHoverEffect
+      appTooltip="Consulter les informations de {{ candidate.name | titlecase }}"
     >
       <div class="overflow-hidden max-h-[200px]">
         <img
           class="w-80 h-60 object-cover auto-fill rounded-t-lg"
           src="{{ candidate.profilePictureUrl }}"
-          alt="{{ candidate.name }} avatar"
+          alt="{{ candidate.name | titlecase }} avatar"
         />
       </div>
 
@@ -21,13 +22,13 @@
           <p
             class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
           >
-            {{ candidate.name }}
+            {{ candidate.name | titlecase }}
           </p>
         </a>
         <p
-          class="font-normal text-gray-700 dark:text-gray-400 truncate max-w-96 mb-5"
+          class="font-normal text-gray-700 dark:text-gray-400 mb-5"
         >
-          {{ candidate.bio }}
+          {{ candidate.bio | maxLength: 25 }}
         </p>
 
         <div class="flex justify-end items-center">

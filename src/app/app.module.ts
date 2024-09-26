@@ -14,6 +14,9 @@ import { ElectionComponent } from './election/election.component';
 import { StatisticComponent } from './election/statistic/statistic.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { MaxLengthPipe } from './shared/pipes/max-length.pipe';
+import { TooltipDirective } from './shared/directives/tooltip.directive';
+import { HoverEffectDirective } from './shared/directives/hover-effect.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { FooterComponent } from './shared/footer/footer.component';
     StatisticComponent,
     HeaderComponent,
     FooterComponent,
+    MaxLengthPipe,
+    TooltipDirective,
+    HoverEffectDirective,
   ],
   imports: [
     BrowserModule,

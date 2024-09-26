@@ -1,1 +1,49 @@
-<p>statistic works!</p>
+<div class="container relative overflow-x-auto">
+  <h2 class="text-center">Podium</h2>
+  <div class="flex justify-center space-x-8">
+    <div *ngFor="let candidate of candidatesVoteCounts | slice:0:3, let i = index" class="flex flex-col items-center pb-10">
+        <div class="flex flex-col items-center pb-10">
+            <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="{{ candidate.profilePictureUrl }}" alt="{{ candidate.name | titlecase }} avatar"/>
+            <span class="text-sm text-gray-500 dark:text-gray-400">{{ i+1 }}</span>
+            <div class="px-4 pt-4" id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                        <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+                    </svg>
+            </div>
+            <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{ candidate.name}}</h5>
+            <span class="text-sm text-gray-500 dark:text-gray-400">{{ candidate.votes | percent }} des voix</span>
+        </div>
+    </div>
+  </div>
+
+  <h2 class="text-center">Resultats généraux</h2>
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
+          <tr>
+              <th scope="col" class="px-6 py-3 rounded-s-lg">
+                Rang
+              </th>
+              <th scope="col" class="px-6 py-3">
+                Candidat
+              </th>
+              <th scope="col" class="px-6 py-3 rounded-e-lg">
+                Pourcentage de votes
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="bg-white dark:bg-gray-800" *ngFor="let candidate of candidatesVoteCounts, let i = index">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  {{ i+1 }}
+              </th>
+              <td class="px-6 py-4">
+                  {{ candidate.name | titlecase }}
+              </td>
+              <td class="px-6 py-4">
+                  {{ candidate.votes | percent }}
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
