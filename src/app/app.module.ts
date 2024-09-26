@@ -12,8 +12,8 @@ import { ConfirmationComponent } from './shared/components/confirmation/confirma
 import { CandidateComponent } from './election/candidate/candidate.component';
 import { ElectionComponent } from './election/election.component';
 import { StatisticComponent } from './election/statistic/statistic.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 import { MaxLengthPipe } from './shared/pipes/max-length.pipe';
 import { TooltipDirective } from './shared/directives/tooltip.directive';
 import { HoverEffectDirective } from './shared/directives/hover-effect.directive';
