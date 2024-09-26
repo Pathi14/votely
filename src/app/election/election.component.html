@@ -3,14 +3,14 @@
 <section class="container">
   <h1>Candidats</h1>
 
-  <section class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-5">
+  <section class="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-5">
     <div
       class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       *ngFor="let candidate of candidates"
     >
       <div class="overflow-hidden max-h-[200px]">
         <img
-          class="rounded-t-lg"
+          class="w-80 h-60 object-cover auto-fill rounded-t-lg"
           src="{{ candidate.profilePictureUrl }}"
           alt="{{ candidate.name }} avatar"
         />
