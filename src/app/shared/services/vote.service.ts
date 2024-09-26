@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { voteResult } from '../models/vote-result.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,7 @@ export class VoteService {
     return this.http.post(this.apiUrl, voteData).subscribe();
   }
   
+  getVote(): Observable<voteResult[]> {
+    return this.http.get<voteResult[]>(this.apiUrl);
+  }
 }

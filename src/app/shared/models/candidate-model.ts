@@ -1,4 +1,5 @@
 export interface Candidate {
+    votePercentage: number;
     id: string;
     name: string;
     age: number;
