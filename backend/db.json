@@ -137,6 +137,14 @@
       "password": "azerty",
       "age": 21,
       "sexe": "M"
+    },
+    {
+      "id": "0f50",
+      "email": "ngj@gmail.com",
+      "name": "Junior Ngounou",
+      "password": "azerty",
+      "age": 23,
+      "sexe": "M"
     }
   ],
   "candidates": [
