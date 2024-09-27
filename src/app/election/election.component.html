@@ -2,12 +2,14 @@
 
 <section class="container">
   <h1>Candidats</h1>
-  <section class="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-5">
+  <section class="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-5">
     <div
       class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       *ngFor="let candidate of candidates"
       appHoverEffect
-      appTooltip="Consulter les informations de {{ candidate.name | titlecase }}"
+      appTooltip="Consulter les informations de {{
+        candidate.name | titlecase
+      }}"
     >
       <div class="overflow-hidden max-h-[200px]">
         <img
@@ -25,10 +27,8 @@
             {{ candidate.name | titlecase }}
           </p>
         </a>
-        <p
-          class="font-normal text-gray-700 dark:text-gray-400 mb-5"
-        >
-          {{ candidate.bio | maxLength: 25 }}
+        <p class="font-normal text-gray-700 dark:text-gray-400 mb-5">
+          {{ candidate.bio | maxLength : 25 }}
         </p>
 
         <div class="flex justify-end items-center">

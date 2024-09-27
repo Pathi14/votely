@@ -104,13 +104,13 @@ export class VoteComponent {
 
   private checkUserVotingStatus() {
     if (!this.authService.user) {
-      this.router.navigate(['/login']);
       return;
     }
 
     this.voteService
       .hasUserVoted(this.authService.user.id)
-      .subscribe((votes: any[]) => {
+      .subscribe((votes) => {
+        console.log(votes);
         this.hasAlreadyVoted = votes.length > 0;
       });
   }

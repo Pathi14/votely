@@ -7,15 +7,20 @@ import { CandidateComponent } from './election/candidate/candidate.component';
 import { ElectionComponent } from './election/election.component';
 import { StatisticComponent } from './election/statistic/statistic.component';
 import { SignupComponent } from 'src/app/auth/signup/signup.component';
+import { AuthGuard } from 'src/app/shared/guards/auth.guard';
+import { GuestGuard } from 'src/app/shared/guards/guest.guard';
+import { HasNotVotedGuard } from 'src/app/shared/guards/has-not-voted.guard';
 
 const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+    canActivate: [GuestGuard],
   },
   {
     path: 'signup',
     component: SignupComponent,
+    canActivate: [GuestGuard],
   },
   {
     path: '',
@@ -32,6 +37,7 @@ const routes: Routes = [
   {
     path: 'vote/:candidateId',
     component: VoteComponent,
+    canActivate: [AuthGuard, HasNotVotedGuard],
   },
   {
     path: 'statistic',

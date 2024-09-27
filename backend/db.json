@@ -145,6 +145,22 @@
       "password": "azerty",
       "age": 23,
       "sexe": "M"
+    },
+    {
+      "id": "b4c0",
+      "email": "john@doe.test.com",
+      "name": "John Doe",
+      "password": "azerty",
+      "age": 25,
+      "sexe": "M"
+    },
+    {
+      "id": "d7a8",
+      "email": "votant123@test.com",
+      "name": "votant123",
+      "password": "azerty",
+      "age": 20,
+      "sexe": "M"
     }
   ],
   "candidates": [
@@ -377,16 +393,6 @@
       "voteTime": "2024-09-21T19:33:17.631Z"
     },
     {
-      "id": "ea04",
-      "candidateId": "1",
-      "qualities": "bkjbdkjhlkdjkjzldkzh",
-      "program": "1",
-      "representation": "ljfeiljefjie",
-      "profitable": "communication",
-      "listening": "2",
-      "voteTime": "2024-09-25T12:59:27.012Z"
-    },
-    {
       "id": "386a",
       "userId": "86e2",
       "candidateId": "1",
@@ -396,6 +402,28 @@
       "profitable": "communication",
       "listening": "1",
       "voteTime": "2024-09-25T13:02:08.305Z"
+    },
+    {
+      "id": "3889",
+      "userId": "b4c0",
+      "candidateId": "10",
+      "qualities": "nkejbfeklbfkeljbfbkelqbfklefjfefef",
+      "program": "3",
+      "representation": "feqsgsrgrsgsrgrsgrg",
+      "profitable": "vote_en_ligne",
+      "listening": "2",
+      "voteTime": "2024-09-27T12:39:18.614Z"
+    },
+    {
+      "id": "5145",
+      "userId": "d7a8",
+      "candidateId": "10",
+      "qualities": "dzdzdzdzdzd",
+      "program": "1",
+      "representation": "zdfezrggrgsgrrg",
+      "profitable": "communication",
+      "listening": "2",
+      "voteTime": "2024-09-27T12:41:15.088Z"
     }
   ]
 }
