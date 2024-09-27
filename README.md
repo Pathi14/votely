@@ -1,27 +1,78 @@
-# Votely
+# Votely - Application de Votes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.15.
+Bienvenue dans **Votely**, une application de vote conçue avec Angular v16 pour permettre aux utilisateurs de voter et de consulter des candidats. L'application utilise **JSON Server** comme backend pour la gestion des données des candidats et des votes.
 
-## Development server
+## Membre de groupe
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Thierry Pavone TCHOUAMOU PAYONG](https://github.com/Pathi14)
+- [Paul-Henry NGANKAM NGOUNOU](https://github.com/Paul-HenryN)
+- [Maxime Loïc NKWEMI  NJIKI](https://github.com/MaximeLoic)
 
-## Code scaffolding
+## Table des matières
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Caractéristiques](#caractéristiques)
+- [Technologies](#technologies)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Lancer l'application](#lancer-lapplication)
 
-## Build
+## Caractéristiques
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Gestion des votes** : Inscription, Informations sur les candidats, vote, et consultation des résultats.
+- **Affichage dynamique des candidats** : Les candidats sont listés avec leurs détails (nom, biographie, photo, etc.).
+- **Backend simple** : Utilisation de **JSON Server** pour simuler une API RESTful pour les candidats et les votes.
+- **Composants réutilisables** : Développement modulaire et scalable avec Angular.
 
-## Running unit tests
+## Technologies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Frontend** : Angular v16 (TypeScript, HTML, CSS)
+- **Backend** : JSON Server pour simuler une API REST
+- **Gestion de styles** : Tailwind CSS
+- **Bibliothèques** :
+  - Angular Router pour la navigation
+  - Angular Forms pour la gestion des formulaires
+  - Angular HTTPClient pour les appels API
 
-## Running end-to-end tests
+## Prérequis
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Avant de commencer, assurez-vous d'avoir les logiciels suivants installés sur votre machine :
 
-## Further help
+- **Node.js** (version 18.x)
+- **Angular CLI** (version 16.x)
+- **Git** (facultatif, mais recommandé)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Installation
+
+1. Clonez le dépôt depuis GitHub :
+
+   ```bash
+   git clone https://github.com/Pathi14/votely.git
+
+2. Accessez le dossier du projet :
+
+   ```bash
+   cd votely
+   ```
+
+3. Installez les dépendances du projet :
+
+   ```bash
+   npm install
+   ```
+
+## Lancer l'application
+
+1. Lancer le backend (JSON Server) :
+
+   ```bash
+   cd backend
+   npx json-server db.json
+   ```
+
+2. Lancez le projet angular :
+
+   ```bash
+   ng serve
+   ```
+
+3. Accédez à l'URL suivante dans votre navigateur web : http://localhost:4200/

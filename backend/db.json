@@ -161,6 +161,14 @@
       "password": "azerty",
       "age": 20,
       "sexe": "M"
+    },
+    {
+      "id": "9374",
+      "email": "levi@gmail.com",
+      "name": "levi toas",
+      "password": "qsdfgh",
+      "age": 19,
+      "sexe": "F"
     }
   ],
   "candidates": [
@@ -424,6 +432,17 @@
       "profitable": "communication",
       "listening": "2",
       "voteTime": "2024-09-27T12:41:15.088Z"
+    },
+    {
+      "id": "6fcb",
+      "userId": "9374",
+      "candidateId": "1",
+      "qualities": "Calme patient et à l'écoute",
+      "program": "4",
+      "representation": "Oui grâce à son esprit de leadership.",
+      "profitable": "communication",
+      "listening": "4",
+      "voteTime": "2024-09-27T18:39:42.574Z"
     }
   ]
 }
